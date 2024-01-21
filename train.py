@@ -6,7 +6,7 @@ from torch import nn
 from torch import optim
 from torchvision import datasets, transforms, models
 
-def arg_parser():
+def argument_parser():
     parser = argparse.ArgumentParser(description="Train.py")
     parser.add_argument('--arch', dest="arch", action="store", default="vgg16", type = str)
     parser.add_argument('--save_dir', dest="save_dir", action="store", default="./checkpoint.pth")
@@ -194,7 +194,7 @@ torch.save({'structure' :'alexnet',
 def main():
      
     # Get Keyword Args for Training
-    args = arg_parser()
+    args = argument_parser()
     
     # Set directory for training
     data_dir = 'flowers'
