@@ -7,7 +7,7 @@ from math import ceil
 from train import check_gpu
 from torchvision import models
 
-def arg_parser():
+def argument_parser():
     parser = argparse.ArgumentParser(description="predict.py")
     parser.add_argument('--image',type=str,help='Point to impage file for prediction.',required=True)
     parser.add_argument('--checkpoint',type=str,help='Point to checkpoint file as str.',required=True)
@@ -84,7 +84,7 @@ def print_probability(probs, flowers):
 
 def main():
     
-    args = arg_parser()
+    args = argument_parser()
     
     with open(args.category_names, 'r') as f:
         	cat_to_name = json.load(f)
